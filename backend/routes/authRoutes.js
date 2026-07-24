@@ -119,7 +119,7 @@ router.post("/login", async (req, res) => {
             secure: false,
             sameSite: "lax",
             maxAge: 7 * 24 * 60 * 60 * 1000
-        });w
+        });
 
         res.status(200).json({
 
