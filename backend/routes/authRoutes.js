@@ -7,7 +7,7 @@ const isValidUser = require("../middleware/validateUser");
 
 const router = express.Router();
 
-// ================= REGISTER =================
+//acc creation
 
 router.post("/register", async (req, res) => {
   try {
@@ -56,7 +56,7 @@ router.post("/register", async (req, res) => {
   }
 });
 
-// ================= LOGIN =================
+//login
 
 router.post("/login", async (req, res) => {
   try {
@@ -117,7 +117,7 @@ router.post("/login", async (req, res) => {
   }
 });
 
-// ================= CURRENT USER =================
+//curr user
 
 router.get("/me", isValidUser, async (req, res) => {
   try {
@@ -135,7 +135,8 @@ router.get("/me", isValidUser, async (req, res) => {
   }
 });
 
-// ================= LOGOUT =================
+
+// logout.
 
 router.post("/logout", (req, res) => {
   res.clearCookie("token");

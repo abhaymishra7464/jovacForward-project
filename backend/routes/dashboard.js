@@ -4,10 +4,7 @@ const router = express.Router();
 const Idea = require("../models/Idea");
 const validateUser = require("../middleware/isValidUser");
 
-// =====================================
-// Dashboard - All Startup Analyses
-// GET /api/dashboard
-// =====================================
+//dashboard
 
 router.get("/", validateUser, async (req, res) => {
   try {
@@ -44,10 +41,9 @@ router.get("/", validateUser, async (req, res) => {
   }
 });
 
-// =====================================
+
 // Single Startup Analysis
-// GET /api/dashboard/:id
-// =====================================
+
 
 router.get("/:id", validateUser, async (req, res) => {
   try {

@@ -1,31 +1,11 @@
-// import Hero from "../components/hero";
-// import Stats from "../components/stats";
-// import Trusted from "../components/trusted";
-// import Features from "../components/features";
-// import HowItWorks from "../components/howitworks";
-// import Cta from "../components/cta";
 
-// const Home = () => {
-//   return (
-//     <>
-//       <Hero />
-//       <Stats />
-//       <Trusted />
-//       <Features />
-//       <HowItWorks />
-//       <Cta />
-//     </>
-//   );
-// };
 
-// export default Home;
-
-import Hero from "../components/hero";
-import Stats from "../components/stats";
-import Trusted from "../components/trusted";
-import Features from "../components/features";
-import HowItWorks from "../components/howitworks";
-import Cta from "../Components/Cta";
+import Hero from "../Components/hero";
+import Stats from "../Components/stats";
+import Trusted from "../Components/trusted";
+import Features from "../Components/features";
+import HowItWorks from "../Components/howitworks";
+import Cta from "../Components/cta";
 import "../styles/home.css";
 
 const Home = () => {
