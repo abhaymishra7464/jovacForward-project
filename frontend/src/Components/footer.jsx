@@ -69,10 +69,7 @@ const Footer = () => {
 
       </div>
 
-      <div className="container copyright">
-        <span>© 2026 AI Startup Validator</span>
-        <span>Built for founders.</span>
-      </div>
+     
     </footer>
   );
 };

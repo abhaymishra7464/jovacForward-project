@@ -98,11 +98,6 @@ const Dashboard = () => {
             <strong>{loading ? "..." : stats.reports}</strong>
           </div>
 
-          <div className="dashboard-stat-box">
-            <div className="stat-icon"><FaDownload /></div>
-            <span>Downloads</span>
-            <strong>0</strong>
-          </div>
 
         </div>
 
