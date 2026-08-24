@@ -1,4 +1,4 @@
-.validate-page{
+/* .validate-page{
     background:#F8FAFC;
     min-height:100vh;
     padding:70px 20px;
@@ -64,4 +64,152 @@
 button:disabled{
     opacity:.7;
     cursor:not-allowed;
+} */
+
+
+
+
+
+
+
+.validate-page {
+  min-height: 100vh;
+  background: var(--cream);
+  padding: 85px 0 120px;
+}
+
+.validate-header {
+  max-width: 800px;
+  margin-bottom: 70px;
+}
+
+.validate-header h1 span {
+  color: var(--grey-400);
+}
+
+.validate-header p {
+  max-width: 600px;
+  margin-top: 25px;
+  font-size: 16px;
+}
+
+.validate-layout {
+  display: grid;
+  grid-template-columns: 0.55fr 1.45fr;
+  gap: 70px;
+  align-items: start;
+}
+
+.validate-side {
+  position: sticky;
+  top: 110px;
+}
+
+.validate-side > span {
+  font-size: 9px;
+  letter-spacing: 1.5px;
+  color: var(--grey-400);
+}
+
+.validate-point {
+  border-top: 1px solid var(--border);
+  padding: 18px 0;
+  display: flex;
+  gap: 20px;
+  margin-top: 18px;
+}
+
+.validate-point strong {
+  font-size: 10px;
+}
+
+.validate-point p {
+  font-size: 13px;
+  color: var(--black);
+}
+
+.validate-container {
+  background: white;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 45px;
+}
+
+.validate-container form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.form-section-title {
+  font-size: 9px;
+  letter-spacing: 1.5px;
+  font-weight: 700;
+  margin-top: 15px;
+  margin-bottom: 5px;
+}
+
+.form-section-title span {
+  color: var(--grey-400);
+  margin-right: 14px;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.validate-container input,
+.validate-container textarea {
+  width: 100%;
+  border: 1px solid var(--border);
+  background: var(--grey-50);
+  padding: 16px;
+  border-radius: 8px;
+  outline: none;
+  font-size: 14px;
+  color: var(--black);
+  resize: vertical;
+}
+
+.validate-container input:focus,
+.validate-container textarea:focus {
+  border-color: var(--black);
+  background: white;
+}
+
+.validate-container button {
+  margin-top: 15px;
+  background: var(--black);
+  color: white;
+  padding: 16px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 13px;
+}
+
+.validate-container button:hover {
+  background: #292929;
+}
+
+@media (max-width: 850px) {
+  .validate-layout {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .validate-side {
+    position: static;
+  }
+}
+
+@media (max-width: 550px) {
+  .validate-container {
+    padding: 25px;
+  }
+
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
 }

@@ -1,4 +1,4 @@
-.auth-page{
+/* .auth-page{
     min-height:100vh;
     display:flex;
     justify-content:center;
@@ -72,4 +72,144 @@
 .auth-link a{
     color:var(--primary);
     font-weight:600;
+} */
+
+
+
+
+
+
+
+
+.auth-page {
+  min-height: calc(100vh - 76px);
+  background: var(--cream);
+  padding: 80px 24px;
+  display: flex;
+  align-items: center;
+}
+
+.auth-layout {
+  width: min(1100px, 100%);
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1fr 0.8fr;
+  gap: 100px;
+  align-items: center;
+}
+
+.auth-intro > span {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+}
+
+.auth-intro h1 {
+  margin-top: 25px;
+}
+
+.auth-intro h1 em {
+  color: var(--grey-400);
+  font-style: normal;
+}
+
+.auth-intro p {
+  max-width: 420px;
+  margin-top: 25px;
+}
+
+.auth-card {
+  background: white;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 40px;
+}
+
+.auth-card-top {
+  padding-bottom: 25px;
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 30px;
+}
+
+.auth-card-top span {
+  font-size: 9px;
+  letter-spacing: 1.5px;
+  color: var(--grey-400);
+}
+
+.auth-card h2 {
+  font-size: 34px;
+  margin-bottom: 8px;
+}
+
+.auth-card > p {
+  font-size: 13px;
+  margin-bottom: 30px;
+}
+
+.auth-card form {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+}
+
+.auth-card label {
+  font-size: 10px;
+  font-weight: 700;
+  margin-top: 10px;
+}
+
+.auth-card input {
+  border: 1px solid var(--border);
+  background: var(--grey-50);
+  padding: 15px;
+  border-radius: 7px;
+  outline: none;
+  font-size: 13px;
+}
+
+.auth-card input:focus {
+  border-color: var(--black);
+  background: white;
+}
+
+.auth-card button {
+  margin-top: 18px;
+  padding: 15px;
+  background: var(--black);
+  color: white;
+  border-radius: 7px;
+  font-weight: 600;
+}
+
+.auth-card button:hover {
+  background: #292929;
+}
+
+.auth-link {
+  text-align: center;
+  margin: 25px 0 0 !important;
+  font-size: 12px !important;
+}
+
+.auth-link a {
+  color: var(--black);
+  text-decoration: underline;
+  font-weight: 600;
+}
+
+@media (max-width: 800px) {
+  .auth-layout {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .auth-intro {
+    text-align: center;
+  }
+
+  .auth-intro p {
+    margin-left: auto;
+    margin-right: auto;
+  }
 }

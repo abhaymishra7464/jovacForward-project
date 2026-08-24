@@ -1,4 +1,4 @@
-.history-page {
+/* .history-page {
   min-height: 100vh;
   background: #f8fafc;
   padding: 60px 8%;
@@ -141,5 +141,140 @@
 
   .history-card {
     padding: 15px;
+  }
+} */
+
+
+
+
+
+
+
+
+.history-page {
+  min-height: 100vh;
+  background: var(--cream);
+  padding: 80px 0 110px;
+}
+
+.history-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  gap: 30px;
+  margin-bottom: 65px;
+}
+
+.history-header h1 span {
+  color: var(--grey-400);
+}
+
+.history-header p {
+  max-width: 500px;
+  margin-top: 25px;
+}
+
+.history-new-btn {
+  background: var(--black);
+  color: white;
+  padding: 14px 20px;
+  border-radius: 7px;
+  font-size: 13px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.history-card {
+  background: white;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+}
+
+.history-table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.history-table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 750px;
+}
+
+.history-table th {
+  text-align: left;
+  padding: 17px;
+  font-size: 9px;
+  letter-spacing: 1.3px;
+  color: var(--grey-400);
+  border-bottom: 1px solid var(--border);
+}
+
+.history-table td {
+  padding: 20px 17px;
+  border-bottom: 1px solid var(--grey-100);
+  font-size: 13px;
+}
+
+.history-table tbody tr {
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.history-table tbody tr:hover {
+  background: var(--grey-50);
+}
+
+.history-title {
+  font-family: "Space Grotesk", sans-serif;
+  font-weight: 600;
+}
+
+.history-idea {
+  color: var(--muted);
+  max-width: 350px;
+}
+
+.history-score {
+  display: inline-block;
+  border: 1px solid var(--black);
+  padding: 6px 9px;
+  border-radius: 6px;
+  font-weight: 700;
+  font-size: 11px;
+}
+
+.view-report-btn {
+  background: transparent;
+  color: var(--black);
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.history-empty {
+  padding: 100px 20px;
+  text-align: center;
+}
+
+.history-empty > span {
+  font-size: 9px;
+  letter-spacing: 1.5px;
+  color: var(--grey-400);
+}
+
+.history-empty h2 {
+  font-size: 34px;
+  margin: 18px 0 10px;
+}
+
+.history-empty p {
+  margin-bottom: 25px;
+}
+
+@media (max-width: 700px) {
+  .history-header {
+    flex-direction: column;
+    align-items: flex-start;
   }
 }

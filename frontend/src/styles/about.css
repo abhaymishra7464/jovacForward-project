@@ -1,0 +1,114 @@
+.about-page {
+  min-height: 100vh;
+  background: var(--cream);
+  padding: 90px 0 120px;
+}
+
+.about-hero {
+  max-width: 1000px;
+  margin-bottom: 100px;
+}
+
+.about-hero h1 {
+  margin-top: 28px;
+}
+
+.about-hero h1 span {
+  color: var(--grey-400);
+}
+
+.about-hero > p {
+  max-width: 620px;
+  font-size: 17px;
+  margin-top: 30px;
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border: 1px solid var(--border);
+}
+
+.about-black {
+  background: var(--black);
+  color: white;
+  padding: 55px;
+  min-height: 380px;
+}
+
+.about-black > span,
+.about-text > span {
+  font-size: 9px;
+  letter-spacing: 1.5px;
+}
+
+.about-black > span {
+  color: #777;
+}
+
+.about-black h2 {
+  color: white;
+  margin-top: 90px;
+}
+
+.about-text {
+  background: white;
+  padding: 55px;
+}
+
+.about-text > span {
+  color: var(--grey-400);
+}
+
+.about-text p {
+  color: var(--black);
+  font-size: 15px;
+  margin-top: 45px;
+}
+
+.about-text p + p {
+  margin-top: 25px;
+}
+
+.about-values {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  border-left: 1px solid var(--border);
+  margin-top: 80px;
+}
+
+.about-values > div {
+  padding: 30px;
+  border-right: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+
+.about-values span {
+  font-size: 10px;
+  color: var(--grey-400);
+}
+
+.about-values h3 {
+  margin: 45px 0 10px;
+  font-size: 23px;
+}
+
+.about-values p {
+  font-size: 13px;
+}
+
+@media (max-width: 700px) {
+  .about-grid,
+  .about-values {
+    grid-template-columns: 1fr;
+  }
+
+  .about-black,
+  .about-text {
+    padding: 35px 25px;
+  }
+
+  .about-black h2 {
+    margin-top: 70px;
+  }
+}

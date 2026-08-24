@@ -1,4 +1,4 @@
-.result-page{
+/* .result-page{
     min-height:100vh;
     background:#F8FAFC;
     padding:60px 8%;
@@ -139,4 +139,274 @@ font-size:30px;
     }
 
 }
+} */
+
+
+
+
+
+
+
+
+.result-page {
+  min-height: 100vh;
+  background: var(--cream);
+  padding: 85px 0 120px;
+}
+
+.result-header {
+  text-align: center;
+  max-width: 850px;
+  margin: auto;
+  margin-bottom: 55px;
+}
+
+.result-header h1 {
+  margin: 25px 0;
+}
+
+.result-header p {
+  max-width: 680px;
+  margin: auto;
+}
+
+.result-loading {
+  padding: 100px 0;
+  text-align: center;
+}
+
+.result-loading > span {
+  font-size: 9px;
+  letter-spacing: 1.5px;
+  color: var(--grey-400);
+}
+
+.result-loading h2 {
+  margin: 20px 0;
+}
+
+.rating-card {
+  background: var(--black);
+  color: white;
+  border-radius: var(--radius-lg);
+  padding: 45px;
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  margin-bottom: 25px;
+}
+
+.rating-card span,
+.rating-description {
+  font-size: 10px;
+  letter-spacing: 1px;
+  color: #888;
+}
+
+.rating-card h2 {
+  color: white;
+  font-size: 80px;
+  margin-top: 10px;
+}
+
+.rating-card small {
+  font-size: 22px;
+  color: #777;
+}
+
+.rating-description {
+  max-width: 250px;
+  line-height: 1.7;
+  letter-spacing: 0;
+}
+
+.result-card {
+  background: white;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 38px;
+  margin-bottom: 20px;
+}
+
+.result-label {
+  font-size: 9px;
+  letter-spacing: 1.5px;
+  color: var(--grey-400);
+  margin-bottom: 18px;
+}
+
+.result-card h2 {
+  font-size: 32px;
+  margin-bottom: 18px;
+}
+
+.result-card > p {
+  max-width: 850px;
+}
+
+.tag-list {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.tag-list span {
+  border: 1px solid var(--border);
+  border-radius: 100px;
+  padding: 9px 13px;
+  font-size: 12px;
+}
+
+.market-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
+
+.market-grid div {
+  border-top: 1px solid var(--border);
+  padding-top: 18px;
+}
+
+.market-grid span,
+.swot-item span {
+  font-size: 9px;
+  letter-spacing: 1.3px;
+  color: var(--grey-400);
+}
+
+.market-grid p {
+  margin-top: 10px;
+  font-size: 13px;
+}
+
+.clean-list > div {
+  display: flex;
+  gap: 22px;
+  border-top: 1px solid var(--border);
+  padding: 17px 0;
+}
+
+.clean-list > div span {
+  font-size: 10px;
+  color: var(--grey-400);
+}
+
+.clean-list p {
+  font-size: 13px;
+}
+
+.swot-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border-top: 1px solid var(--border);
+}
+
+.swot-item {
+  padding: 25px 20px 25px 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.swot-item:nth-child(odd) {
+  border-right: 1px solid var(--border);
+  padding-right: 25px;
+}
+
+.swot-item:nth-child(even) {
+  padding-left: 25px;
+}
+
+.swot-item p {
+  margin-top: 12px;
+  font-size: 13px;
+}
+
+.competitors-list {
+  border-top: 1px solid var(--border);
+}
+
+.competitor-card {
+  display: grid;
+  grid-template-columns: 50px 1fr;
+  gap: 20px;
+  padding: 25px 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.competitor-number {
+  font-size: 10px;
+  color: var(--grey-400);
+}
+
+.competitor-card h3 {
+  font-size: 20px;
+  margin-bottom: 7px;
+}
+
+.competitor-card p {
+  font-size: 13px;
+}
+
+.verdict-card {
+  background: var(--black);
+  color: white;
+  border-radius: var(--radius-lg);
+  padding: 50px;
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+
+.verdict-card span {
+  font-size: 9px;
+  letter-spacing: 1.5px;
+  color: #777;
+}
+
+.verdict-card h2 {
+  color: white;
+  font-size: clamp(30px, 4vw, 48px);
+  margin-top: 25px;
+}
+
+.back-btn {
+  display: inline-block;
+  margin-top: 5px;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+@media (max-width: 700px) {
+  .result-page {
+    padding: 55px 0 80px;
+  }
+
+  .result-card,
+  .rating-card,
+  .verdict-card {
+    padding: 25px;
+  }
+
+  .rating-card {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 25px;
+  }
+
+  .rating-card h2 {
+    font-size: 60px;
+  }
+
+  .market-grid,
+  .swot-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .swot-item:nth-child(odd) {
+    border-right: none;
+    padding-right: 0;
+  }
+
+  .swot-item:nth-child(even) {
+    padding-left: 0;
+  }
 }
