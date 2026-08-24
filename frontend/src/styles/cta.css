@@ -1,0 +1,45 @@
+.cta{
+    padding:90px 0;
+}
+
+.cta-box{
+    background:linear-gradient(135deg,#2563EB,#1E40AF);
+    color:white;
+    padding:70px 50px;
+    border-radius:24px;
+    text-align:center;
+}
+
+.cta-box h2{
+    color:white;
+    margin-bottom:20px;
+}
+
+.cta-box p{
+    color:#E2E8F0;
+    max-width:700px;
+    margin:0 auto 35px;
+}
+
+.cta-btn{
+    display:inline-block;
+    background:white;
+    color:#2563EB;
+    padding:15px 34px;
+    border-radius:14px;
+    font-weight:700;
+    transition:.3s;
+}
+
+.cta-btn:hover{
+    transform:translateY(-3px);
+    box-shadow:0 10px 30px rgba(0,0,0,.15);
+}
+
+@media(max-width:768px){
+
+.cta-box{
+padding:45px 25px;
+}
+
+}

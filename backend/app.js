@@ -16,13 +16,13 @@ const connectDb = require("./config/connectDb");
 connectDb();
 
 const dashBoardRoutes = require("./routes/dashboard");
-app.use(dashBoardRoutes);
+app.use("/api/dashboard", dashBoardRoutes);
 
 const authRoutes = require("./routes/authRoutes");
-app.use(authRoutes);
+app.use("/api/auth", authRoutes);
 
 const analyzerRoutes = require("./routes/analyzer");
-app.use(analyzerRoutes);
+app.use("/api/analyzer", analyzerRoutes);
 
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {

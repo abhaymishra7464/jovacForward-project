@@ -3,10 +3,11 @@ import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
 import "../styles/auth.css";
 
-const Login = () => {
+const Register = () => {
   const navigate = useNavigate();
 
   const [formData, setFormData] = useState({
+    name: "",
     email: "",
     password: "",
   });
@@ -23,35 +24,18 @@ const Login = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    if (!formData.email.trim() || !formData.password.trim()) {
-      alert("Please fill all fields.");
-      return;
-    }
-
     try {
       setLoading(true);
 
       const res = await axios.post(
-        "http://localhost:5000/api/auth/login",
-        {
-          email: formData.email.trim(),
-          password: formData.password,
-        },
-        {
-          withCredentials: true,
-        },
+        "http://localhost:5000/api/auth/register",
+        formData,
       );
 
-      console.log("Login successful:", res.data);
-
-      navigate("/dashboard");
+      alert(res.data.msg);
+      navigate("/login");
     } catch (err) {
-      console.log("Login error:", err);
-
-      alert(
-        err.response?.data?.msg ||
-          "Unable to login. Please check your credentials.",
-      );
+      alert(err.response?.data?.msg || "Registration Failed");
     } finally {
       setLoading(false);
     }
@@ -60,16 +44,22 @@ const Login = () => {
   return (
     <div className="auth-page">
       <div className="auth-card">
-        <h1>Welcome Back</h1>
+        <h1>Create Account</h1>
 
-        <p>Login to continue validating your startup ideas.</p>
+        <p>Start validating your startup ideas with AI.</p>
 
         <form onSubmit={handleSubmit}>
+          <input
+            type="text"
+            name="name"
+            placeholder="Full Name"
+            onChange={handleChange}
+          />
+
           <input
             type="email"
             name="email"
             placeholder="Email Address"
-            value={formData.email}
             onChange={handleChange}
           />
 
@@ -77,21 +67,20 @@ const Login = () => {
             type="password"
             name="password"
             placeholder="Password"
-            value={formData.password}
             onChange={handleChange}
           />
 
           <button type="submit" disabled={loading}>
-            {loading ? "Logging In..." : "Login"}
+            {loading ? "Creating..." : "Create Account"}
           </button>
         </form>
 
         <p className="auth-link">
-          Don't have an account? <Link to="/register">Register</Link>
+          Already have an account? <Link to="/login">Login</Link>
         </p>
       </div>
     </div>
   );
 };
 
-export default Login;
+export default Register;
