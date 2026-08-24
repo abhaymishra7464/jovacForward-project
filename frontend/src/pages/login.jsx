@@ -44,7 +44,7 @@ const Login = () => {
 
       console.log("Login successful:", res.data);
 
-      navigate("/dashboard");
+      window.location.href = "/dashboard";
     } catch (err) {
       console.log("Login error:", err);
 

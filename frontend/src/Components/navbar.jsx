@@ -23,11 +23,15 @@ const Navbar = () => {
     checkLogin();
   }, []);
 
-  const handleLogout = async () => {
+ const handleLogout = async () => {
     try {
-      await axios.get("http://localhost:5000/api/auth/logout", {
-        withCredentials: true,
-      });
+      await axios.post(
+        "http://localhost:5000/api/auth/logout",
+        {},
+        {
+          withCredentials: true,
+        }
+      );
 
       setIsLoggedIn(false);
       navigate("/");

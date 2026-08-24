@@ -112,11 +112,25 @@ const Result = () => {
         </div>
 
         {/* Business Model */}
-        <div className="result-card">
+        {/* <div className="result-card">
           <h2>Business Model</h2>
 
           {typeof idea.businessModel === "object" ? (
             <pre>{JSON.stringify(idea.businessModel, null, 2)}</pre>
+          ) : (
+            <p>{idea.businessModel}</p>
+          )}
+        </div> */}
+
+        <div className="result-card">
+          <h2>Business Model</h2>
+
+          {Array.isArray(idea.businessModel) ? (
+            <ul>
+              {idea.businessModel.map((model, index) => (
+                <li key={index}>{model}</li>
+              ))}
+            </ul>
           ) : (
             <p>{idea.businessModel}</p>
           )}
@@ -170,7 +184,7 @@ const Result = () => {
         </div>
 
         {/* Competitors */}
-        <div className="result-card">
+        {/* <div className="result-card">
           <h2>Competitors</h2>
 
           {Array.isArray(idea.competitors) ? (
@@ -185,6 +199,29 @@ const Result = () => {
             </ul>
           ) : typeof idea.competitors === "object" ? (
             <pre>{JSON.stringify(idea.competitors, null, 2)}</pre>
+          ) : (
+            <p>{idea.competitors}</p>
+          )}
+        </div> */}
+
+        <div className="result-card">
+          <h2>Competitors</h2>
+
+          {Array.isArray(idea.competitors) ? (
+            <div className="competitors-list">
+              {idea.competitors.map((competitor, index) => (
+                <div className="competitor-card" key={index}>
+                  {typeof competitor === "object" ? (
+                    <>
+                      <h3>{competitor.name}</h3>
+                      <p>{competitor.strength}</p>
+                    </>
+                  ) : (
+                    <p>{competitor}</p>
+                  )}
+                </div>
+              ))}
+            </div>
           ) : (
             <p>{idea.competitors}</p>
           )}
